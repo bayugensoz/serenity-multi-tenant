@@ -123,15 +123,6 @@ namespace SerenMulti.Northwind.Repositories
                     query.Where(fld.TenantId == UserDef.TenantId);
                 }
             }
-
-            //protected override void ApplyFilters(SqlQuery query)
-            //{
-            //    base.ApplyFilters(query);
-            //    if (!Permissions.HasPermission(Administration.PermissionKeys.Tenants))
-            //    {
-            //        query.Where(fld.TenantId == UserDef.TenantId);
-            //    }
-            //}
         }
     }
 }

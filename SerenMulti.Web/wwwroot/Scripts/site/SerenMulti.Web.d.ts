@@ -2009,6 +2009,53 @@ declare namespace SerenMulti.Northwind {
 declare namespace SerenMulti.Northwind {
 }
 declare namespace SerenMulti.Northwind {
+    interface TagsForm {
+        Name: Serenity.StringEditor;
+    }
+    class TagsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace SerenMulti.Northwind {
+    interface TagsRow {
+        Id?: number;
+        Name?: number[];
+    }
+    namespace TagsRow {
+        const idProperty = "Id";
+        const localTextPrefix = "Northwind.Tags";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            Name = "Name"
+        }
+    }
+}
+declare namespace SerenMulti.Northwind {
+    namespace TagsService {
+        const baseUrl = "Northwind/Tags";
+        function Create(request: Serenity.SaveRequest<TagsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<TagsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<TagsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<TagsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Northwind/Tags/Create",
+            Update = "Northwind/Tags/Update",
+            Delete = "Northwind/Tags/Delete",
+            Retrieve = "Northwind/Tags/Retrieve",
+            List = "Northwind/Tags/List"
+        }
+    }
+}
+declare namespace SerenMulti.Northwind {
+}
+declare namespace SerenMulti.Northwind {
     interface TerritoryForm {
         TerritoryID: Serenity.StringEditor;
         TerritoryDescription: Serenity.StringEditor;
@@ -3562,6 +3609,29 @@ declare namespace SerenMulti.Northwind {
         protected getColumnsKey(): string;
         protected getDialogType(): any;
         protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace SerenMulti.Northwind {
+    class TagsDialog extends Serenity.EntityDialog<TagsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: TagsForm;
+    }
+}
+declare namespace SerenMulti.Northwind {
+    class TagsGrid extends Serenity.EntityGrid<TagsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TagsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);

@@ -37,6 +37,7 @@ namespace SerenMulti.Common
             {
                 using var client = new SmtpClient();
                 client.Connect(smtp.Host, smtp.Port, smtp.UseSsl);
+                client.Authenticate(smtp.Email, smtp.Password);
                 client.Send(message);
                 client.Disconnect(true);
             }

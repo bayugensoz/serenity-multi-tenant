@@ -249,5 +249,6 @@ namespace SerenMulti.Common {
                 .attr("src", Q.resolveUrl("~/Scripts/jspdf.plugin.autotable.min.js"))
                 .appendTo(document.head);
         }
+
     }
 }

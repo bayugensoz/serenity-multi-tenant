@@ -8745,3 +8745,9 @@ section.content > .s-DataGrid {
 .s-NoteDialog .ui-dialog-content {
   padding-bottom: 10px;
 }
+.s-Northwind-TagsDialog > .size {
+  width: 650px;
+}
+.s-Northwind-TagsDialog .caption {
+  width: 150px;
+}

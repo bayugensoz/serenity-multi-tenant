@@ -318,6 +318,11 @@ namespace MVC
                 public const string SupplierIndex = "~/Modules/Northwind/Supplier/SupplierIndex.cshtml";
             }
 
+            public static class Tags
+            {
+                public const string TagsIndex = "~/Modules/Northwind/Tags/TagsIndex.cshtml";
+            }
+
             public static class Territory
             {
                 public const string TerritoryIndex = "~/Modules/Northwind/Territory/TerritoryIndex.cshtml";

@@ -1,4 +1,5 @@
 ﻿using Serenity.Navigation;
+using MyPages = SerenMulti.Northwind.Pages;
 using Northwind = SerenMulti.Northwind.Pages;
 
 [assembly: NavigationMenu(7000, "Northwind", icon: "fa-anchor")]
@@ -11,3 +12,4 @@ using Northwind = SerenMulti.Northwind.Pages;
 [assembly: NavigationLink(7700, "Northwind/Regions", typeof(Northwind.RegionController), icon: "fa-map-o")]
 [assembly: NavigationLink(7800, "Northwind/Territories", typeof(Northwind.TerritoryController), icon: "fa-puzzle-piece")]
 [assembly: NavigationLink(7900, "Northwind/Reports", typeof(Northwind.ReportsController), icon: "fa-files-o")]
+[assembly: NavigationLink(int.MaxValue, "Northwind/Tags", typeof(MyPages.TagsController), icon: null)]

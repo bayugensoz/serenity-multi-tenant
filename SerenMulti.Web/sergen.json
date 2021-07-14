@@ -14,6 +14,17 @@
           "PermissionKey": "Administration:Tenants"
         }
       ]
+    },
+    {
+      "Key": "Northwind",
+      "Tables": [
+        {
+          "Tablename": "tags",
+          "Identifier": "Tags",
+          "Module": "Northwind",
+          "PermissionKey": "Administration:General"
+        }
+      ]
     }
   ],
   "UpgradeInfo": {

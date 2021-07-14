@@ -1,0 +1,29 @@
+From:
+Date: Wed, 14 Jul 2021 11:23:00 +0700
+Subject: Reset Your SerenMulti Password
+Message-Id: <4J0WEJAX8EU4.7A9PUGRRR5S@LAPTOP-N168K6RU>
+To: bayugensoz@gmail.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Id: <6W1WEJAX8EU4.HBRG4DRD0RGP2@LAPTOP-N168K6RU>
+
+
+<html>
+<head>
+    <title>Reset your SerenMulti password</title>
+</head>
+<body>
+    <p>Bayu Ramadhan,</p>
+
+    <p>We received a request to change your password on SerenMulti.</p>
+
+    <p>Click the link below to set a new password:</p>
+
+    <p><a href="http://localhost:5000/Account/ResetPassword?t=CfDJ8CpcrXdFUB9GnU4%2FkAqlMgwdiQaOAkYwcY78HJjyTNqTlg9w6SaFQV3CsZIh%2FmaFZFGRteVW5M0LEHLvHD2CqihmkjveG0QaG6Coc1wAPjY7OMUpqhd7%2Fg93GtEWRYW9jQ%3D%3D">http://localhost:5000/Account/ResetPassword?t=CfDJ8CpcrXdFUB9GnU4%2FkAqlMgwdiQaOAkYwcY78HJjyTNqTlg9w6SaFQV3CsZIh%2FmaFZFGRteVW5M0LEHLvHD2CqihmkjveG0QaG6Coc1wAPjY7OMUpqhd7%2Fg93GtEWRYW9jQ%3D%3D</a></p>
+
+    <p>If you don't want to change your password, you can ignore this email.</p>
+
+    Thanks,
+    The "SerenMulti" Team
+</body>
+</html>
