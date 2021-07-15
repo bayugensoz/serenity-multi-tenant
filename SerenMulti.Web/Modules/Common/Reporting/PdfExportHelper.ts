@@ -227,7 +227,7 @@ namespace SerenMulti.Common {
             $("<script/>")
                 .attr("type", "text/javascript")
                 .attr("id", "jsPDFScript")
-                .attr("src", Q.resolveUrl("~/Scripts/jspdf.min.js"))
+                .attr("src", Q.resolveUrl("~/Serenity.Assets/Scripts/jspdf.min.js"))
                 .appendTo(document.head);
         }
 
@@ -246,7 +246,7 @@ namespace SerenMulti.Common {
             $("<script/>")
                 .attr("type", "text/javascript")
                 .attr("id", "jsPDFAutoTableScript")
-                .attr("src", Q.resolveUrl("~/Scripts/jspdf.plugin.autotable.min.js"))
+                .attr("src", Q.resolveUrl("~/Serenity.Assets/Scripts/jspdf.plugin.autotable.min.js"))
                 .appendTo(document.head);
         }
 

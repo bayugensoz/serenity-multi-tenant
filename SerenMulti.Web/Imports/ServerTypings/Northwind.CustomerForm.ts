@@ -2,6 +2,7 @@
     export interface CustomerForm {
         CustomerID: Serenity.StringEditor;
         CompanyName: Serenity.StringEditor;
+        Tags: Serenity.LookupEditor;
         ContactName: Serenity.StringEditor;
         ContactTitle: Serenity.StringEditor;
         Representatives: Serenity.LookupEditor;
@@ -40,6 +41,7 @@
                 Q.initFormType(CustomerForm, [
                     'CustomerID', w0,
                     'CompanyName', w0,
+                    'Tags', w1,
                     'ContactName', w0,
                     'ContactTitle', w0,
                     'Representatives', w1,

@@ -1,10 +1,8 @@
-﻿using Serenity;
-using Serenity.ComponentModel;
+﻿using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
 using System.ComponentModel;
-using System.IO;
 
 namespace SerenMulti.Northwind.Entities
 {
@@ -12,6 +10,7 @@ namespace SerenMulti.Northwind.Entities
     [DisplayName("Tags"), InstanceName("Tags")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript(typeof(TagsLookup))]
     public sealed class TagsRow : Row<TagsRow.RowFields>, IIdRow
     {
         [DisplayName("Id"), Identity, IdProperty]
@@ -21,8 +20,8 @@ namespace SerenMulti.Northwind.Entities
             set => fields.Id[this] = value;
         }
 
-        [DisplayName("Name"), NotNull]
-        public Stream Name
+        [DisplayName("Name"), NotNull, QuickSearch, NameProperty]
+        public String Name
         {
             get => fields.Name[this];
             set => fields.Name[this] = value;
@@ -41,7 +40,7 @@ namespace SerenMulti.Northwind.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field Id;
-            public StreamField Name;
+            public StringField Name;
         }
     }
 }

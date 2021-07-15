@@ -12,6 +12,6 @@ namespace SerenMulti.Northwind.Forms
     [BasedOnRow(typeof(Entities.TagsRow), CheckNames = true)]
     public class TagsForm
     {
-        public Stream Name { get; set; }
+        public String Name { get; set; }
     }
 }

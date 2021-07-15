@@ -38,6 +38,14 @@ namespace SerenMulti.Northwind.Entities
             set => fields.CompanyName[this] = value;
         }
 
+        [DisplayName("Tags"), LookupEditor(typeof(TagsRow), Multiple = true, Delimited = true)]
+        [MinSelectLevel(SelectLevel.Details), QuickFilter(CssClass = "hidden-xs")]
+        public String Tags
+        {
+            get => fields.Tags[this];
+            set => fields.Tags[this] = value;
+        }
+
         [DisplayName("Contact Name"), Size(30), QuickSearch]
         public String ContactName
         {
@@ -174,6 +182,8 @@ namespace SerenMulti.Northwind.Entities
             public StringField CustomerID;
             public StringField CompanyName;
             public StringField ContactName;
+            public StringField Tags;
+
             public StringField ContactTitle;
             public StringField Address;
             public StringField City;

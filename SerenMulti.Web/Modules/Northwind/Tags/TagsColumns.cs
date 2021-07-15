@@ -12,8 +12,9 @@ namespace SerenMulti.Northwind.Columns
     [BasedOnRow(typeof(Entities.TagsRow), CheckNames = true)]
     public class TagsColumns
     {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        [Width(80), EditLink, AlignRight]
         public Int32 Id { get; set; }
-        public Stream Name { get; set; }
+        [Width(240), EditLink]
+        public String Name { get; set; }
     }
 }

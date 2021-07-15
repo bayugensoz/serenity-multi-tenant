@@ -4,6 +4,7 @@
         CustomerID?: string;
         CompanyName?: string;
         ContactName?: string;
+        Tags?: string;
         ContactTitle?: string;
         Address?: string;
         City?: string;
@@ -41,6 +42,7 @@
             CustomerID = "CustomerID",
             CompanyName = "CompanyName",
             ContactName = "ContactName",
+            Tags = "Tags",
             ContactTitle = "ContactTitle",
             Address = "Address",
             City = "City",

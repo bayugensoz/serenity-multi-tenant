@@ -30,6 +30,8 @@ namespace SerenMulti.Northwind.Columns
         public String Phone { get; set; }
         [Width(120)]
         public String Fax { get; set; }
+        [Width(180), TagsListFormatter, QuickFilter]
+        public String Tags { get; set; }
         [Width(250), EmployeeListFormatter, CellDecorator(typeof(EmployeeListDecorator))]
         public String Representatives { get; set; }
         public Int32 TenantId { get; set; }

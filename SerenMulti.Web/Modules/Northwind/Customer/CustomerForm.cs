@@ -12,6 +12,8 @@ namespace SerenMulti.Northwind.Forms
         [Category("General")]
         public String CustomerID { get; set; }
         public String CompanyName { get; set; }
+        [LookupEditor(typeof(TagsLookup), Multiple = true, Delimited = true, InplaceAdd = true)]
+        public String Tags { get; set; }
         [Category("Contact")]
         public String ContactName { get; set; }
         public String ContactTitle { get; set; }

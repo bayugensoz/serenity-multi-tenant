@@ -1045,6 +1045,7 @@ declare namespace SerenMulti.Northwind {
     interface CustomerForm {
         CustomerID: Serenity.StringEditor;
         CompanyName: Serenity.StringEditor;
+        Tags: Serenity.LookupEditor;
         ContactName: Serenity.StringEditor;
         ContactTitle: Serenity.StringEditor;
         Representatives: Serenity.LookupEditor;
@@ -1117,6 +1118,7 @@ declare namespace SerenMulti.Northwind {
         CustomerID?: string;
         CompanyName?: string;
         ContactName?: string;
+        Tags?: string;
         ContactTitle?: string;
         Address?: string;
         City?: string;
@@ -1149,6 +1151,7 @@ declare namespace SerenMulti.Northwind {
             CustomerID = "CustomerID",
             CompanyName = "CompanyName",
             ContactName = "ContactName",
+            Tags = "Tags",
             ContactTitle = "ContactTitle",
             Address = "Address",
             City = "City",
@@ -2021,11 +2024,14 @@ declare namespace SerenMulti.Northwind {
 declare namespace SerenMulti.Northwind {
     interface TagsRow {
         Id?: number;
-        Name?: number[];
+        Name?: string;
     }
     namespace TagsRow {
         const idProperty = "Id";
+        const nameProperty = "Name";
         const localTextPrefix = "Northwind.Tags";
+        const lookupKey = "Northwind.Tags";
+        function getLookup(): Q.Lookup<TagsRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
         const readPermission = "Administration:General";
@@ -3656,5 +3662,10 @@ declare namespace SerenMulti.Northwind {
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);
+    }
+}
+declare namespace SerenMulti.Northwind {
+    class TagsListFormatter implements Slick.Formatter {
+        format(ctx: Slick.FormatterContext): string;
     }
 }
